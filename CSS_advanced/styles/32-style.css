@@ -1,15 +1,12 @@
-/* Import necolas' normalize.css for browser consistency */
-@import "https://necolas.github.io/normalize.css/8.0.1/normalize.css";
 
-/* Define CSS custom properties (variables) on the root element */
-:root {
+:root{
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-base:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
@@ -159,14 +156,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
     color: var(--section-title-color);
-}
 
+
+}
 .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
     margin: var(--section-tagline-margin);
+
+
 }
 
 .container {
@@ -222,7 +222,6 @@ ul.row {
     letter-spacing: var(--nav-item-letter-spacing);
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
-    position: relative;
 }
 
 .nav .nav-link {
@@ -323,15 +322,6 @@ ul.row {
 .card-work .card-outer {
     position: relative;
     overflow: hidden;
-    transition: var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-.card-work:hover .card-outer {
-    transform: scale(0.95);
-}
-
-.card-work .card-image {
-    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work .card-image img {
@@ -339,10 +329,6 @@ ul.row {
     width: 100%;
     object-fit: cover;
     vertical-align: bottom;
-}
-
-.card-work:hover .card-image img {
-    transform: scale(1.2);
 }
 
 .card-work .card-inner {
@@ -397,6 +383,15 @@ ul.row {
     color: #efeded;
     font-size: 10rem;
     z-index: -1;
+}
+
+.card-work:hover .card-image {
+    transform: scale(1.2);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work:hover .card-outer {
+    transform: scale(0.95);
 }
 
 [data-section-theme="dark"] {
