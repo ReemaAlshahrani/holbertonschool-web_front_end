@@ -251,6 +251,11 @@ ul.row {
     fill: var(--text-color);
 }
 
+/* Target footer class and set padding */
+.footer {
+    padding: var(--footer-padding);
+}
+
 /* Target footer-copyright class: no margins, font-size-small, foreground color text-color */
 .footer-copyright {
     margin: 0;
@@ -261,9 +266,4 @@ ul.row {
 /* Target all ul tags in the footer class and align text to the right */
 .footer ul {
     text-align: right;
-}
-
-/* Target footer class and set padding */
-.footer {
-    padding: var(--footer-padding);
 }
