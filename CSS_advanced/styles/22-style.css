@@ -118,8 +118,8 @@ a:active {
     padding: var(--section-padding);
 }
 
-/* Style dark theme sections using data attribute */
-.section[data-section-theme="dark"] {
+/* Style dark theme sections using attribute selector */
+[data-section-theme="dark"] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
     background-color: var(--color-black);
