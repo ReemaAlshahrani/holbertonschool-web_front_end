@@ -63,9 +63,9 @@ html {
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 0.04em;
+    --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem 0;
+    --nav-item-margin: 0 0 3rem;
     --nav-item-link-hover: var(--color-primary);
 }
 
@@ -174,7 +174,7 @@ a:active {
     text-align: center;
 }
 
-/* Target nav-item class inside nav class */
+/* Target nav-item class in nav class */
 .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -184,13 +184,13 @@ a:active {
     margin: var(--nav-item-margin);
 }
 
-/* Target nav-link class inside nav class */
+/* Target nav-link class in nav class */
 .nav .nav-link {
     display: block;
     padding: 0.5rem 1rem;
 }
 
-/* Target hover state for nav-link inside nav class */
+/* While hovering over the nav-link class in nav class, set their foreground color value to nav-item-link-hover */
 .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
