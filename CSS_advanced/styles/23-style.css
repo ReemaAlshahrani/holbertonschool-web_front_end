@@ -236,34 +236,30 @@ ul.row {
     width: 50%;
 }
 
-/* Target footer-address class */
+/* New additions for task 23 */
 .footer-address {
     color: var(--text-color);
 }
 
-/* Target social-link class */
 .social-link {
     display: block;
 }
 
-/* Target svg children inside social-link class */
 .social-link svg {
     fill: var(--text-color);
 }
 
-/* Target footer class and set padding */
+/* Footer elements */
 .footer {
     padding: var(--footer-padding);
 }
 
-/* Target footer-copyright class: no margins, font-size-small, foreground color text-color */
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
     color: var(--text-color);
 }
 
-/* Target all ul tags in the footer class and align text to the right */
 .footer ul {
     text-align: right;
 }
