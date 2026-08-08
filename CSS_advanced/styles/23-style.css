@@ -1,17 +1,6 @@
 /* Import necolas' normalize.css for browser consistency */
 @import "https://necolas.github.io/normalize.css/8.0.1/normalize.css";
 
-/* Apply universal box sizing rule to all elements and pseudo-elements */
-*, *:before, *:after {
-    box-sizing: border-box;
-}
-
-/* Enable smooth scrolling behavior for the entire page and set base font size to 62.5% */
-html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
 /* Define CSS custom properties (variables) on the root element */
 :root {
     --color-primary: #d73953;
@@ -47,9 +36,18 @@ html {
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
-    --nav-item-margin: 0 0 3rem;
+    --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
     --section-tagline-margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
@@ -58,11 +56,6 @@ body {
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
-    font-weight: var(--font-weight-bold);
 }
 
 a:link {
@@ -82,6 +75,11 @@ a:active {
     background-color: var(--color-light-grey);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
 .visually-hidden {
     display: none;
 }
@@ -90,35 +88,9 @@ a:active {
     padding: var(--section-padding);
 }
 
-[data-section-theme="dark"] {
-    --text-color: var(--color-white);
-    --section-title-color: var(--color-white);
-    background-color: var(--color-black);
-}
-
 .section-header {
     text-align: var(--section-header-align);
     padding: var(--section-header-padding);
-}
-
-.section-title {
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
-}
-
-.card-category {
-    color: var(--color-primary);
-}
-
-.section-tagline {
-    color: var(--color-primary);
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-tagline-margin);
 }
 
 .section-body {
@@ -130,10 +102,55 @@ a:active {
     text-align: var(--section-footer-align);
 }
 
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+}
+
+.section-tagline {
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-tagline-margin);
+}
+
 .container {
     width: 960px;
     margin-left: auto;
     margin-right: auto;
+}
+
+ul.row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem;
+}
+
+.col-1-3 {
+    width: 33.33%;
+}
+
+.col-1-2 {
+    width: 50%;
+}
+
+.card-category {
+    color: var(--color-primary);
 }
 
 .navbar-menu {
@@ -165,43 +182,6 @@ a:active {
     color: var(--nav-item-link-hover);
 }
 
-ul.row {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-[class^="col-"] {
-    float: left;
-    padding: 0.5rem;
-}
-
-.col-1-3 {
-    width: 33.33%;
-}
-
-.col-1-2 {
-    width: 50%;
-}
-
-.footer-address {
-    color: var(--text-color);
-}
-
-.social-link {
-    display: block;
-}
-
-.social-link svg {
-    fill: var(--text-color);
-}
-
 .footer {
     padding: var(--footer-padding);
 }
@@ -214,4 +194,22 @@ ul.row {
 
 .footer ul {
     text-align: right;
+}
+
+.footer-address {
+    color: var(--text-color);
+}
+
+.social-link {
+    display: block;
+}
+
+.social-link > svg {
+    fill: var(--text-color);
+}
+
+[data-section-theme="dark"] {
+    --text-color: var(--color-white);
+    --section-title-color: var(--color-white);
+    background: var(--color-black);
 }
