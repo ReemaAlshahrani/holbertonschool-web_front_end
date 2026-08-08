@@ -1,12 +1,15 @@
+/* Import necolas' normalize.css for browser consistency */
+@import "https://necolas.github.io/normalize.css/8.0.1/normalize.css";
 
-:root{
+/* Define CSS custom properties (variables) on the root element */
+:root {
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
@@ -156,17 +159,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
     margin: var(--section-title-margin);
     color: var(--section-title-color);
-
-
 }
+
 .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
     margin: var(--section-tagline-margin);
-
-
 }
 
 .container {
@@ -216,12 +216,13 @@ ul.row {
 }
 
 .nav .nav-item {
-    font-family: var(--nav-item-font-family);
+    font-family: var(--font-family-title);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
+    position: relative;
 }
 
 .nav .nav-link {
@@ -307,6 +308,20 @@ ul.row {
     color: var(--color-primary);
 }
 
+.card-testimonial .card-quote {
+    position: relative;
+}
+
+.card-testimonial .card-quote::before {
+    content: "\201C";
+    position: absolute;
+    top: -4.5rem;
+    left: -1rem;
+    color: #efeded;
+    font-size: 10rem;
+    z-index: -1;
+}
+
 .section-hero {
     background-size: 90rem auto;
 }
@@ -369,20 +384,6 @@ ul.row {
 
 .card-work:hover .card-title {
     opacity: 1;
-}
-
-.card-testimonial .card-quote {
-    position: relative;
-}
-
-.card-testimonial .card-quote::before {
-    content: "\201C";
-    position: absolute;
-    top: -4.5rem;
-    left: -1rem;
-    color: #efeded;
-    font-size: 10rem;
-    z-index: -1;
 }
 
 .card-work:hover .card-image {
