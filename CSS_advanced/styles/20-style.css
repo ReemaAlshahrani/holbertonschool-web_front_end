@@ -206,8 +206,8 @@ ul.row {
     list-style: none;
 }
 
-/* Clearfix for row class to handle floated children */
-ul.row::after {
+/* Clearfix for row class using general .row::after selector */
+.row::after {
     content: "";
     display: table;
     clear: both;
