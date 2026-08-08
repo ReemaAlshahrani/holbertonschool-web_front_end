@@ -1,0 +1,57 @@
+/* Enable smooth scrolling behavior for the entire page and set base font size to 62.5% */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/* Define CSS custom properties (variables) on the root element */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+    
+    /* Define font-family variables */
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    /* Define font-size variables */
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+}
+
+/* Set the default foreground color, font-family, and font-size for body */
+body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-medium);
+}
+
+/* Target all 6 levels of heading tags and set their font-family */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
+/* Set the default foreground color for anchor elements using variables */
+a {
+    color: var(--text-color);
+}
+
+/* Hide elements with the visually-hidden class */
+.visually-hidden {
+    display: none;
+}
+
+/* Set the foreground color for card-category and section-tagline classes using variables */
+.card-category {
+    color: var(--color-primary);
+}
+
+.section-tagline {
+    color: var(--color-primary);
+}
